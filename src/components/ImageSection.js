@@ -8,7 +8,7 @@ export default class ImageSection extends React.Component {
         let section = _.get(this.props, 'section', null);
         let section_width = _.get(section, 'width', null) || 'regular';
         return (
-            <figure className={classNames('image-block', 'container', {'container--md': section_width === 'regular', 'container--lg': section_width === 'wide'})}>
+            <figure style={} className={classNames('image-block', 'container', {'container--md': section_width === 'regular', 'container--lg': section_width === 'wide'})}>
               {_.get(section, 'image', null) && (
               <img src={withPrefix(_.get(section, 'image', null))} alt={_.get(section, 'image_alt', null)} />
               )}
